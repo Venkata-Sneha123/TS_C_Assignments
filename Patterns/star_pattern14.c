@@ -11,40 +11,35 @@ The pattern is :
    **
     *
 
-*/
-#include<stdio.h>
+#include <stdio.h>
 
 int main()
 {
-int row=10,i,j;
-printf("The pattern is :\n");
-for (int i = 1; i <= row; i++)
-{
-	if(i <= row/2)
+    int i,j,n=5,k;
+     for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)//*****
         {
-        	for (j = 0; j < row/2-1; j++)
-                {
-                	printf(" ");
-            	}
-            	for (j = 1; j <= i ; j++)
-            	{
-                	printf("*");
-            	}
+            printf(" ");
         }
-        else
+        for(k=0;k<=i;k++)
         {
-            for(j = 1;j<=row/2;j++)
-            {
-               if(j>=i-row/2)
-               {
-                   printf("*");
-               }
-               else
-                printf(" ");
-            }
+            printf("*");
         }
         printf("\n");
     }
-    
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n-i;j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+        for(k=0;k<i;k++)
+        {
+            printf(" ");
+        }
+    }
+
     return 0;
 }

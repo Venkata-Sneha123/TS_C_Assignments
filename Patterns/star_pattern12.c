@@ -10,22 +10,22 @@ The pattern is :
 #include<stdio.h>
 int main()
 {
-int row=5,col=5;
-int i,j;
-printf("The pattern is :\n");
-for(i=0;i<row;i++)
-{
-	for(j=0;j<col+(2*i);j++)
+    int i,j,k,l,n=5;
+    for(i=0;i<n;i++)
+    {
+        for(k=0;k<i;k++)
         {
-        	if((2*i)>j)
-        		printf(" ");
-            	else 
-            	{
-                	printf("* ");
-                }
-
+            printf(" ");
         }
-	printf("\n");
-}
-return 0;
+        for(j=0;j<n-i;j++)
+        {
+            printf("*");
+        }
+        for(l=0;l<i;l++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
 }
